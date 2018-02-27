@@ -104,7 +104,7 @@ class bird :
 
 
 
-# Class instances (no classes themselves) have two type of attributes: data and methods
+# Class instances (not classes themselves) have two type of attributes: data and methods
 # data (data members)
 european = bird('European Swallow')
 print(european.type)
@@ -120,7 +120,7 @@ print(european.velocity)
 
 assert bird.velocity(european) == european.velocity()
 
-# a method object is created on refence
+# a method object is created on reference
 european_velocity = european.velocity
 
 print(european_velocity)
@@ -177,7 +177,7 @@ class african(bird) :
 
     def velocity(self) :
         #return self.airspeed - self.number_coconuts * african.load_factor
-        return bird.velocity(self) - self.number_coconuts * african.load_factor
+        #return bird.velocity(self) - self.number_coconuts * african.load_factor
         return super().velocity() - self.number_coconuts * african.load_factor
 
 
@@ -204,7 +204,7 @@ print(issubclass(bool, bird))
 
 # multiple inheritence
 # attributes inherited from a parent class as depth-first, left-to-right, not searching twice in the same class where there is an overlap in the hierarchy
-# all inherit indirectly from objec if not specified
+# all inherit indirectly from object if not specified
 class norwegian_blue(bird, object) :
     pass
 

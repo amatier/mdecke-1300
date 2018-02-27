@@ -1,14 +1,11 @@
 ##
 # @file iterators.py
 #
-# Modules and packages in Python based on: https://docs.python.org/3/tutorial
+# Iterators in Python based on: https://docs.python.org/3/tutorial
 #
 # @author Michael John Decker, Ph.D.
 #
 
-# python namespace is a mapping from names to objects
-# E.g.,builtin namespace (interpretter startup), global namespace (created when read in), function local namespace (on call)
-# declarations in a namespace are attributes (. operator)
 import functools
 
 @functools.total_ordering
